@@ -9,4 +9,9 @@ package code.c_动态规划.最大子段和问题;
  * {@code description}:
  */
 public class Main {
+    public static void main(String[] args) {
+        int[] ints = new int[]{-2,11,-4,13,-5,-2};
+        System.out.println(MaxSum.maxSum(ints, 0, ints.length - 1));
+        System.out.println(MaxSum.maxSum2(ints));
+    }
 }
