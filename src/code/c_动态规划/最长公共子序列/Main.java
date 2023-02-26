@@ -13,5 +13,9 @@ public class Main {
         char[] a = "hello,howayoudoing".toCharArray();
         char[] b = "dshahhahelloyagengxuelong".toCharArray();
         MaxLongSequence.maxLongSequence(a,b);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        MaxLongSequence.getResult(a,b);
     }
 }

@@ -13,5 +13,6 @@ public class Main {
         int[] ints = new int[]{-2,11,-4,13,-5,-2};
         System.out.println(MaxSum.maxSum(ints, 0, ints.length - 1));
         System.out.println(MaxSum.maxSum2(ints));
+        System.out.println(MaxSum.getResult(ints));
     }
 }

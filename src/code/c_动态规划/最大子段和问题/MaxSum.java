@@ -1,5 +1,7 @@
 package code.c_动态规划.最大子段和问题;
 
+import java.util.Arrays;
+
 /**
  * @author GengXuelong
  * @version 1.0
@@ -64,6 +66,33 @@ public class MaxSum {
             if(lastSum>sum)sum = lastSum;
         }
         return sum;
+    }
+
+    /**
+     * @author GengXuelong
+     * <p> 函数功能描述如下:
+     * {code description}:
+     *     设b[i] 为以a[i]结尾的子序列的最大子段和
+     *     只要b[i]>0,则b[i+1] = max(b[i]+a[i+1],a[i+1])
+     *     字段和是连续的
+     *     真正的思想: 逐个累加,当小于零后一切归零,继续累加.每加一次更新一次最大值
+     */
+    public static int   getResult(int[] a){
+        int[] b = new int[a.length];
+        int n = a.length;
+        b[0] = Math.max(a[0], 0);
+        int max = 0;
+        for(int i = 1;i<n;i++){
+            if(b[i-1]<=0){
+                b[i] = a[i];
+                if(b[i]>max)max = b[i];
+            }else{
+                b[i]= b[i-1]+a[i];
+                if(b[i]>max)max = b[i];
+            }
+        }
+        System.out.println(Arrays.toString(b));
+        return max;
     }
 
 }
