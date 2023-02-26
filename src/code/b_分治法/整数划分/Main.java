@@ -11,5 +11,6 @@ package code.b_分治法.整数划分;
 public class Main {
     public static void main(String[] args) {
         System.out.println(IntegerDivide.integerDivide(6,6));
+        System.out.println(IntegerDivide.getResult(6,6));
     }
 }

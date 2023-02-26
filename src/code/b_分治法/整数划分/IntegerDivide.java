@@ -26,4 +26,24 @@ public class IntegerDivide {
             return integerDivide(n,n);
         }
     }
+
+
+    /**
+     * @author GengXuelong
+     * <p> 函数功能描述如下:
+     * {code description}:
+     *     当m>n: result(m,n)  = result(n,n)
+     *     当 m<=n: 当m = 1 or n = 1 : result = 1
+     *            else: result(m,n) = result(m-1,n) + result( m,n-m)
+     *
+     */
+    public static int getResult(int m,int n){
+        if(n==1||m==1)return 1;
+        else if(m>n)return getResult(n,n);
+        else if(n!=m){
+            return getResult(m-1,n) + getResult(m,n-m);//当n==m的时候，就不行了n-m可不能大于零呀
+        }else{
+            return getResult(m-1,n)+1;
+        }
+    }
 }

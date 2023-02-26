@@ -13,5 +13,8 @@ public class Main {
         int[] ints = new int[]{1,2,3,4,5};
         Perm.perm(ints,0,ints.length-1);
         System.out.println(5 * 4 * 3 * 2);
+        System.out.println("................");
+        Perm.perm2(ints,0,ints.length-1);
+        System.out.println(5 * 4 * 3 * 2);
     }
 }
